@@ -4,18 +4,13 @@ use CodeIgniter\Controller;
 
 class User extends Controller
 {
-	public function index()
-	{
-		echo 'Welcome to user controller';
-	}
+    public function index()
+    {
+        return view('user/index');
+    }
 
-	public function new()
-	{
-		return view('user/new');
-	}
-
-	public function edit()
-	{
-		return view('user/edit');
-	}
+    public function getData()
+    {
+        var_dump($this->request->getGetPost());
+    }
 }
