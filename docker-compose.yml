@@ -1,0 +1,40 @@
+version: "3.1"
+
+services:
+  ci_db:
+    container_name: ci4_training_db
+    image: mysql:5.7
+    command:
+    - --character-set-server=utf8mb4
+    - --collation-server=utf8mb4_unicode_ci
+    environment:
+    - MYSQL_DATABASE=ci4_training
+    - MYSQL_USER=ci4_training
+    - MYSQL_PASSWORD=ci4_trainingDBPWD
+    - MYSQL_ROOT_PASSWORD=root
+    ports:
+    - "3307:3306"
+
+  ci_web:
+    container_name: ci4_training_web
+    image: docker.web-essentials.asia:5000/typo3-ubuntu18.04-php7.2-apache2:0.0.1
+    ports:
+      - "80:80"
+      - "443:443"
+    depends_on:
+      - ci_db
+    volumes:
+      - ./docker_conf:/docker_conf
+      - ./docker_conf/apache2/vhost.conf:/etc/apache2/sites-available/000-default.conf:ro
+      - .:/var/www/html
+      - /var/www/html/writable
+    environment:
+      - USER_ID=1001
+      - GROUP_ID=1001
+    command: "sh /docker_conf/scripts/web.sh"
+
+  ci_mail:
+    container_name: ci4_training_mail
+    image: mailhog/mailhog
+    ports:
+      - "8025:8025"
