@@ -75,3 +75,12 @@ defined('EXIT_USER_INPUT')     || define('EXIT_USER_INPUT',     7); // invalid u
 defined('EXIT_DATABASE')       || define('EXIT_DATABASE',       8); // database error
 defined('EXIT__AUTO_MIN')      || define('EXIT__AUTO_MIN',      9); // lowest automatically-assigned error code
 defined('EXIT__AUTO_MAX')      || define('EXIT__AUTO_MAX',    125); // highest automatically-assigned error code
+
+/**
+ * Project constants
+ */
+defined('APP_NAME')       || define('APP_NAME', 'CodeIgniter 4 training');
+defined('CSS_PATH')       || define('CSS_PATH', 'assets/css/');
+defined('JS_PATH')        || define('JS_PATH', 'assets/js/');
+defined('IMG_PATH')       || define('IMG_PATH', 'assets/img/');
+defined('VENDOR_PATH')    || define('VENDOR_PATH', 'assets/vendor/');

@@ -6,11 +6,6 @@ class Login extends Controller
 {
     public function index()
     {
-        return view('user/index');
-    }
-
-    public function getData()
-    {
-        var_dump($this->request->getGetPost());
+        return view('login', ['title' => 'Login']);
     }
 }

@@ -17,7 +17,7 @@ services:
 
   ci_web:
     container_name: ci4_training_web
-    image: docker.web-essentials.asia:5000/typo3-ubuntu18.04-php7.2-apache2:0.0.1
+    image: docker.web-essentials.asia:5000/manmath-docker-apache2:0.0.2
     ports:
       - "80:80"
       - "443:443"
