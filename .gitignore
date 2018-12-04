@@ -1,3 +1,11 @@
+.env
+/vendor/
+writable/cache/*
+writable/debugbar/*
+writable/logs/*
+writable/session/*
+writable/uploads/*
+
 !writable/cache/.htaccess
 !writable/cache/index.html
 !writable/logs/.htaccess
@@ -6,10 +14,3 @@
 !writable/session/index.html
 !writable/uploads/.htaccess
 !writable/uploads/index.html
-.env
-vendor/
-writable/cache/*
-writable/debugbar/*
-writable/logs/*
-writable/session/*
-writable/uploads/*
