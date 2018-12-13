@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <?php echo view('partials/includeInsideHead') ?>
+    <?php echo view('partials/includeInsideHead'); ?>
 </head>
 <body>
     <div class="page-wrapper flex-row align-items-center">
@@ -15,19 +15,23 @@
                         <div class="card-body">
                             <div class="form-group">
                                 <label class="form-control-label">Name</label>
-                                <input type="text" name="name" class="form-control">
+                                <input type="text" name="name" value="<?php echo set_value('name'); ?>" class="form-control">
+                                <small class="form-text text-danger"><?php echo $validation->showError('name'); ?></small>
                             </div>
                             <div class="form-group">
                                 <label class="form-control-label">Email</label>
-                                <input type="text" name="email" class="form-control">
+                                <input type="text" name="email" value="<?php echo set_value('email'); ?>" class="form-control">
+                                <small class="form-text text-danger"><?php echo $validation->showError('email'); ?></small>
                             </div>
                             <div class="form-group">
                                 <label class="form-control-label">Password</label>
-                                <input type="password" name="password" class="form-control">
+                                <input type="password" name="password" value="<?php echo set_value('password'); ?>" class="form-control">
+                                <small class="form-text text-danger"><?php echo $validation->showError('password'); ?></small>
                             </div>
                             <div class="form-group">
                                 <label class="form-control-label">Confirm Password</label>
-                                <input type="password" name="confirmPassword" class="form-control">
+                                <input type="password" name="confirmPassword" value="<?php echo set_value('confirmPassword'); ?>" class="form-control">
+                                <small class="form-text text-danger"><?php echo $validation->showError('confirmPassword'); ?></small>
                             </div>
                         </div>
                         <div class="card-footer">

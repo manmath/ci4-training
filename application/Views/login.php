@@ -6,7 +6,7 @@
 <body>
     <div class="page-wrapper flex-row align-items-center">
         <div class="container">
-            <form action="login/verify" method="post" class="form-row justify-content-center">
+            <form action="<?php echo site_url('login/verify'); ?>" method="post" class="form-row justify-content-center">
                 <div class="col-md-5">
                     <div class="card p-4">
                         <div class="card-header text-center text-uppercase h4 font-weight-light">
@@ -15,11 +15,13 @@
                         <div class="card-body">
                             <div class="form-group">
                                 <label class="form-control-label">Email</label>
-                                <input type="text" name="email" class="form-control">
+                                <input type="text" name="email" value="<?php echo set_value('email'); ?>" class="form-control">
+                                <small class="form-text text-danger"><?php echo $validation->showError('email'); ?></small>
                             </div>
                             <div class="form-group">
                                 <label class="form-control-label">Password</label>
                                 <input type="password" name="password" class="form-control">
+                                <small class="form-text text-danger"><?php echo $validation->showError('password'); ?></small>
                             </div>
                         </div>
                         <div class="card-footer">
