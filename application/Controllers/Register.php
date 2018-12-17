@@ -10,6 +10,7 @@ class Register extends Controller
     public function index()
     {
         $this->validate([]);
+
         return view('register', ['title' => 'Register', 'validation' => $this->validator]);
     }
 
