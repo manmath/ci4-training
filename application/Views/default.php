@@ -10,8 +10,6 @@
                 <div class="card-body">
                     <?php
                         $uri = service('uri', current_url(true));
-                        // $uri = \Config\Services::uri(current_url(true));
-                        // $uri = new \CodeIgniter\HTTP\URI(current_url(true));
                         $directory = $uri->getSegment(1);
                         $file = $uri->getSegment(2);
                         if (!$directory) {
@@ -29,5 +27,9 @@
             </div>
         </div>
     </div>
+    <?php
+    echo view('partials/ajaxLoading');
+    echo view('partials/includeBeforeCloseBody');
+    ?>
 </body>
 </html>

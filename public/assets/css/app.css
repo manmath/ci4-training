@@ -1,0 +1,14 @@
+.ajax-loading {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  text-align: center;
+  overflow-x: hidden;
+  overflow-y: auto;
+  z-index: 2500;
+  opacity: .6;
+  background-color: #cccccc;
+  display: none;
+}

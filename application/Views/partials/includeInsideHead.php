@@ -3,4 +3,5 @@
 <meta http-equiv="X-UA-Compatible" content="ie=edge">
 <link rel="stylesheet" href="<?php echo site_url(VENDOR_PATH . 'font-awesome/css/fontawesome-all.min.css'); ?>">
 <link rel="stylesheet" href="<?php echo site_url(CSS_PATH . 'styles.css'); ?>">
+<link rel="stylesheet" href="<?php echo site_url(CSS_PATH . 'app.css'); ?>">
 <title><?php // echo $title . ' - ' . APP_NAME; ?></title>
